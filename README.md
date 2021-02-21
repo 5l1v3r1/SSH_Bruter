@@ -22,7 +22,7 @@ It has 3 modes till now
 ## For Installation Setup:
 &nbsp;
 ```
-$ cd Insecure_shell
+$ cd Insecure_shell/scripts/
 $ chmod 744 setup.sh
 $ ./setup.sh
 ```
@@ -30,7 +30,7 @@ $ ./setup.sh
 &nbsp;
 ### Simply write:
 ```
-$ insecure_shell.py
+$ insecure_shell.py -h
 ```
 ### Then we will be prompted with some options
 
