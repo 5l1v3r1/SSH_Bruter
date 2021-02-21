@@ -10,7 +10,7 @@
 $ pip install requirement.txt
 ```
 
-## So What funcationality it has ?
+## So What are the funcationality it can provide ?
 
 It has 3 modes till now
 
@@ -20,14 +20,12 @@ It has 3 modes till now
 
 
 ## For Installation Setup:
-&nbsp;
 ```
 $ cd Insecure_shell/scripts/
 $ chmod 744 setup.sh
 $ ./setup.sh
 ```
 ## To run:
-&nbsp;
 ### Simply write:
 ```
 $ insecure_shell.py -h
@@ -48,15 +46,15 @@ $ insecure_shell.py -h
 
 ![](https://github.com/reveng007/Insecure_shell/blob/main/images/image4.png)
 
-### The whole summary can be seen with option 4
+#### The whole summary can be seen with option 4
 
 
 ## Let's see one of the script in action:
 
-### Credentials:
+#### Credentials:
 
-### username: msfadmin
-### password: msfadmin
+#### username: msfadmin
+#### password: msfadmin
 
 ![Alt Text](https://github.com/reveng007/Insecure_shell/blob/main/insecure_ssh.gif)
 
