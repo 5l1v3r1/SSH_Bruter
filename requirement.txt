@@ -1,0 +1,6 @@
+
+pyfiglet
+pexpect
+argparse
+time
+
