@@ -1,5 +1,5 @@
 # ***Insecure_Shell***
-![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge)
+![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge) ![made-with-bash](https://shields.io/badge/Made_With-Bash-green?logo=Linux&style=for-the-badge)
 
 
 ![](https://github.com/reveng007/Insecure_shell/blob/main/images/banner.png)
@@ -10,9 +10,9 @@
 $ pip install requirement.txt
 ```
 
-## So What are the funcationality it can provide ?
+## So, What are the functionalities it can provide ?
 
-It has 3 modes till now
+It has 3 modes till now:
 
 1. Bruteforce ssh password alone
 2. Bruteforce ssh username alone
