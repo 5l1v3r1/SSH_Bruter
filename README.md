@@ -64,8 +64,4 @@ $ bash uninstall.sh
 ```
 ## To Do list:
 
-- Adding another script to hunt down ports on which ssh service is running
-- Adding default ssh password manipulating feature
-- Adding multithreading
-- Enabling sudo feature 
-
+- Adding another script to hunt down ports on which ssh service is running on
