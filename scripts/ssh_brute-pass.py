@@ -4,8 +4,6 @@ from pexpect import pxssh
 import argparse
 import time
 
-from p_bar import *
-
 from ssh_connect import *
 
 import color
@@ -28,8 +26,6 @@ def main():
 					passwd = line.strip("\r\n")
 
 					print(color.color_obj.WHITE+"[*] Testing: ", args.user+":"+str(passwd)+color.color_obj.ENDC)
-					
-					#p_bar() #Progressbar
 
 					conn = connect(args.ip, args.user, passwd) # ssh connect
 

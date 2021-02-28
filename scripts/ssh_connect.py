@@ -2,7 +2,6 @@
 
 from pexpect import pxssh
 import time
-import progressbar
 
 import color 
 
