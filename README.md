@@ -1,5 +1,5 @@
 # ***Insecure_Shell***
-![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge) ![made-with-bash](https://shields.io/badge/Made_With-Bash-green?logo=Linux&style=for-the-badge)
+![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge)
 
 
 ![](https://github.com/reveng007/Insecure_shell/blob/main/images/banner.png)
