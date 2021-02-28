@@ -18,17 +18,10 @@ It has 3 modes till now:
 2. Bruteforce ssh username alone
 3. Bruteforce ssh credials (both)
 
-
-## For Installation Setup:
-```
-$ cd Insecure_shell/scripts/
-$ chmod 744 setup.sh
-$ ./setup.sh
-```
 ## To run:
 ### Simply write:
 ```
-$ insecure_shell.py -h
+$ python3 insecure_shell.py -h
 ```
 ### Then we will be prompted with some options
 
@@ -58,10 +51,6 @@ $ insecure_shell.py -h
 
 ![Alt Text](https://github.com/reveng007/Insecure_shell/blob/main/insecure_ssh.gif)
 
-## In Case you didn't like it:
-```
-$ bash uninstall.sh
-```
 ## To Do list:
 
 - Adding another script to hunt down ports on which ssh service is running on

