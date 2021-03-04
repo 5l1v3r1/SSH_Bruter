@@ -19,6 +19,8 @@ class Color:
 		self.Default = Default
 
 
+
+# For ssh login
 def connect(ip, user, passwd):
 	fail = 0
 
@@ -49,6 +51,36 @@ def connect(ip, user, passwd):
 			return connect(ip, user, passwd)
 
 	return None
+
+
+
+# getting shell from the trgt machine
+def shell_getting(user, ip, conn, startTime):
+	if conn:
+
+		totalTime = time.time() - startTime
+		totalTime = '%.3f'%totalTime
+
+		print(color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color_obj.ENDC)
+
+		print(color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
+		'''+color_obj.ENDC)
+
+		command = input(user+'@'+ip+':$ ')
+		while command != 'exit':
+			conn.sendline(command)
+			conn.prompt()
+			print(conn.before.decode("utf-8"))
+			command = input(user+'@'+ip+':$ ')
+			
+		else:
+			print(color_obj.YEL+'''
+Bye!
+			'''+color_obj.ENDC)
+		exit(0)
+
+
+
 
 #ip = input("Enter ip: ")
 #user = input("Enter username: ")

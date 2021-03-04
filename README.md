@@ -1,6 +1,5 @@
-# ***Insecure_Shell***
+# ***SSH_Bruter***
 ![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge)
-
 
 ![](https://github.com/reveng007/Insecure_shell/blob/main/images/banner.png)
 
@@ -21,7 +20,8 @@ It has 3 modes till now:
 ## To run:
 ### Simply write:
 ```
-$ python3 insecure_shell.py -h
+$ cd scripts
+$ python3 man -h
 ```
 ### Then we will be prompted with some options
 
@@ -49,8 +49,5 @@ $ python3 insecure_shell.py -h
 #### username: msfadmin
 #### password: msfadmin
 
-![Alt Text](https://github.com/reveng007/Insecure_shell/blob/main/insecure_ssh.gif)
+![Alt Text](https://github.com/reveng007/Insecure_shell/blob/main/ssh_brute.gif)
 
-## To Do list:
-
-- Adding another script to hunt down ports on which ssh service is running on
