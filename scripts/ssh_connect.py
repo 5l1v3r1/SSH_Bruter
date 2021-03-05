@@ -81,14 +81,6 @@ Bye!
 
 
 
-
-#ip = input("Enter ip: ")
-#user = input("Enter username: ")
-#passwd = input("Enter passwd: ")
-
-#conn = connect(ip, user, passwd)
-
 color_obj = Color('\033[92m', '\033[94m', '\033[96m', '\033[90m', '\033[91m', '\033[95m', '\033[93m', '\033[37m', '\033[0m', '\033[99m')
 
 
-#print(color_obj.RED+"RED"+color_obj.ENDC)
