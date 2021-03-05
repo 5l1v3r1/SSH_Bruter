@@ -21,7 +21,7 @@ It has 3 modes till now:
 ### Simply write:
 ```
 $ cd scripts
-$ python3 man -h
+$ python3 man.py -h
 ```
 ### Then we will be prompted with some options
 
