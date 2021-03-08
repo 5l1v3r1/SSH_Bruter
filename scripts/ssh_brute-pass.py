@@ -36,7 +36,8 @@ def main_p():
 		exit(0)
 
 
+banner()
 
-if __name__ == '__main__': 
-
+if __name__ == '__main__':
 	main_p()
+

@@ -1,5 +1,6 @@
 #!usr/bin/python3
 
+import pyfiglet
 from pexpect import pxssh
 import time
 
@@ -79,6 +80,16 @@ Bye!
 			'''+color_obj.ENDC)
 		exit(0)
 
+
+def banner():
+	bann = pyfiglet.figlet_format("SSH Bruter", font = "slant")
+	print(bann)
+	print('''Please feel free to reach me for some suggestions:
+
+⚪ https://www.linkedin.com/in/soumyanil-biswas/
+
+⚪ https://twitter.com/soumyani1
+''')
 
 
 color_obj = Color('\033[92m', '\033[94m', '\033[96m', '\033[90m', '\033[91m', '\033[95m', '\033[93m', '\033[37m', '\033[0m', '\033[99m')

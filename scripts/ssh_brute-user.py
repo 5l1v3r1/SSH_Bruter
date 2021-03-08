@@ -36,6 +36,7 @@ def main_u():
 		exit(0)
 
 
+banner()
 
 if __name__ == '__main__': 
 

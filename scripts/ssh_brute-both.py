@@ -40,6 +40,7 @@ def main_b():
 			print(parser.usage)
 			exit(0)
 
+banner()
 
 if __name__ == '__main__':
 	
