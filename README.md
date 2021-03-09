@@ -24,6 +24,18 @@ $ python3 ssh_bruter -h
 ```
 ![](https://github.com/reveng007/SSH_Bruter/blob/main/images/image1.png)
 
+## For brute forcing username only:
+```
+$ python3 ssh_bruter -ip <ip> -u_file <username wordlist> -p <password>
+```
+## For brute forcing password only:
+```
+$ python3 ssh_bruter -ip <ip> -u <username> -p_file <password wordlist>
+```
+## For brute forcing both creds:
+```
+$ python3 ssh_bruter -ip <ip> -u_file <username wordlist> -p_file <password wordlist>
+```
 ## Let's see one of the script in action:
 
 #### Credentials:
