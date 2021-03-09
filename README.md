@@ -3,7 +3,6 @@
 
 ![](https://github.com/reveng007/Insecure_shell/blob/main/images/banner.png)
 
-
 ## Requirement:
 ```
 $ pip install requirement.txt
@@ -21,27 +20,8 @@ It has 3 modes till now:
 ### Simply write:
 ```
 $ cd scripts
-$ python3 man.py -h
+$ python3 <pass/user/both> -h
 ```
-### Then we will be prompted with some options
-
-![](https://github.com/reveng007/Insecure_shell/blob/main/images/image1.png)
-
-### If we want to bruteforce for password:
-
-![](https://github.com/reveng007/Insecure_shell/blob/main/images/image2.png)
-
-### If we want to bruteforce for username:
-
-![](https://github.com/reveng007/Insecure_shell/blob/main/images/image3.png)
-
-### If we want to bruteforce both creds:
-
-![](https://github.com/reveng007/Insecure_shell/blob/main/images/image4.png)
-
-#### The whole summary can be seen with option 4
-
-
 ## Let's see one of the script in action:
 
 #### Credentials:
