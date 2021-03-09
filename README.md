@@ -1,7 +1,7 @@
 # ***SSH_Bruter***
 ![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge)
 
-![](https://github.com/reveng007/Insecure_shell/blob/main/images/banner.png)
+![](https://github.com/reveng007/SSH_Bruter/blob/main/images/banner.png)
 
 ## Requirement:
 ```
@@ -22,6 +22,8 @@ It has 3 modes till now:
 $ cd scripts
 $ python3 <pass/user/both> -h
 ```
+![](https://github.com/reveng007/SSH_Bruter/blob/main/images/image1.png)
+
 ## Let's see one of the script in action:
 
 #### Credentials:
@@ -29,5 +31,5 @@ $ python3 <pass/user/both> -h
 #### username: msfadmin
 #### password: msfadmin
 
-![Alt Text](https://github.com/reveng007/Insecure_shell/blob/main/ssh_brute.gif)
+![Alt Text](https://github.com/reveng007/SSH_Bruter/blob/main/ssh_brute.gif)
 
