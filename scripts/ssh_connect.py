@@ -1,8 +1,8 @@
 #!usr/bin/python3
 
-import pyfiglet
-from pexpect import pxssh
-import time
+import pyfiglet # python module used to produce ASCII art fonts
+from pexpect import pxssh # python module for establishing SSH connection
+import time # python module to calculate time
 
 class Color:
 
@@ -80,7 +80,7 @@ Bye!
 			'''+color_obj.ENDC)
 		exit(0)
 
-
+# Banner creater with pyfiglet
 def banner():
 	bann = pyfiglet.figlet_format("SSH Bruter", font = "slant")
 	print(bann)

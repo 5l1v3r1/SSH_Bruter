@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import argparse
+import argparse # python module used to implement user-friendly command-line arguments
 
 from ssh_connect import *
 
@@ -18,6 +18,9 @@ def main():
 	# user brute forcing help section
 	parser.add_argument("-u_file", help="Specify wordlist file for user bruteforce")
 	parser.add_argument("-p", "--passwd", help="Specify password for Target User")
+
+	# brute forcing both creds help section is not shown seperately.
+	# All the needed arguments are present within 'user brute forcing' and 'passwd brute forcing' help sections.
 
 	args = parser.parse_args()
 
@@ -55,6 +58,7 @@ def main():
 
 				# Getting shell after connecting to ssh
 				shell_getting(user, args.ip, conn, startTime)
+
 
 	# Brute forcing both creds
 	elif args.ip and args.u_file and args.p_file:
@@ -99,3 +103,4 @@ banner()
 
 if __name__ == '__main__':
 	main()
+
