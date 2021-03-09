@@ -20,7 +20,7 @@ It has 3 modes till now:
 ### Simply write:
 ```
 $ cd scripts
-$ python3 <pass/user/both> -h
+$ python3 ssh_bruter -h
 ```
 ![](https://github.com/reveng007/SSH_Bruter/blob/main/images/image1.png)
 

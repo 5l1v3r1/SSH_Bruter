@@ -73,7 +73,7 @@ def shell_getting(user, ip, conn, startTime):
 			conn.prompt()
 			print(conn.before.decode("utf-8"))
 			command = input(user+'@'+ip+':$ ')
-			
+
 		else:
 			print(color_obj.YEL+'''
 Bye!
