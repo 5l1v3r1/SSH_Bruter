@@ -36,7 +36,7 @@ $ python3 ssh_bruter -ip <ip> -u <username> -p_file <password wordlist>
 ```
 $ python3 ssh_bruter -ip <ip> -u_file <username wordlist> -p_file <password wordlist>
 ```
-## Let's see one of the script in action:
+## Let's see one of the modes in action:
 
 #### Credentials:
 
