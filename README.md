@@ -1,4 +1,6 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
 # ***SSH_Bruter***
 
 ![](https://github.com/reveng007/SSH_Bruter/blob/main/images/banner.png)
