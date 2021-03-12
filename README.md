@@ -1,5 +1,5 @@
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 # ***SSH_Bruter***
-![made-with-Python](https://shields.io/badge/Made_With-Python-green?logo=Linux&style=for-the-badge)
 
 ![](https://github.com/reveng007/SSH_Bruter/blob/main/images/banner.png)
 
