@@ -3,11 +3,6 @@
 
 ![](https://github.com/reveng007/SSH_Bruter/blob/main/images/banner.png)
 
-## Requirement:
-```
-$ pip install requirement.txt
-```
-
 ## So, What are the functionalities it can provide ?
 
 It has 3 modes till now:
@@ -16,8 +11,18 @@ It has 3 modes till now:
 2. Bruteforce ssh username alone
 3. Bruteforce ssh credials (both)
 
+## To test this script:
+Clone the repository:
+```
+$ git clone https://github.com/reveng007/SSH_Bruter.git
+```
+Install the required python dependencies:
+```
+$ pip install -r requirement.txt
+```
 ## To run:
-### Simply write:
+### Simply write
+
 ```
 $ cd scripts
 $ python3 ssh_bruter -h
